@@ -28,7 +28,7 @@ export const loader: LoaderFunction = async () => {
         },
       }
     );
-
+    console.log(response);
     if (!response.ok) throw new Error("Failed to fetch data");
 
     const html = await response.text();
