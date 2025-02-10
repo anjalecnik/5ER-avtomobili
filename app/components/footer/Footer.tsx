@@ -11,13 +11,13 @@ export default function Footer() {
           Včasih želje presegajo trenutno zalogo. Pustite nam svoje podatke in
           obvestili vas bomo, ko najdemo točno takšno vozilo, kot si želite!
         </p>
-        <div className="mt-4 flex items-center justify-center space-x-2">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           <input
             type="email"
             placeholder="Vaš e-poštni naslov"
-            className="w-72 px-4 py-2 border rounded-lg focus:outline-none bg-gray-200 text-gray-700"
+            className="w-full max-w-[18rem] px-4 py-2 border rounded-lg focus:outline-none bg-gray-200 text-gray-700"
           />
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+          <button className="w-full max-w-[12rem] bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
             Obvestite me
           </button>
         </div>
@@ -27,8 +27,8 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto py-10 px-4 flex flex-wrap justify-between text-gray-800 relative z-10">
-        <div className="w-full sm:w-1/3">
+      <div className="max-w-7xl mx-auto py-10 px-4 text-gray-800 relative z-10 flex flex-col gap-6 md:flex-row md:flex-nowrap md:justify-center md:items-center">
+        <div className="w-full md:w-1/3 text-center md:text-left">
           <h4 className="text-lg font-semibold mb-2">Kontakt</h4>
           <p>
             <a href="tel:041777988" className="text-gray-600 underline">
@@ -49,16 +49,16 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="w-full sm:w-1/3 text-center">
+        <div className="w-full md:w-1/3 text-center">
           <h4 className="text-lg font-semibold mb-2">Delovni čas</h4>
           <p>Ponedeljek - petek: 09:00-17:00</p>
           <p>Sobota: 08:00-12:00</p>
           <p>Nedelja in prazniki: zaprto</p>
         </div>
 
-        <div className="w-full sm:w-1/3 flex flex-col items-end">
+        <div className="w-full md:w-1/3 text-center md:text-right">
           <h4 className="text-lg font-semibold mb-2">Spremljajte nas</h4>
-          <div className="flex space-x-4 text-gray-600">
+          <div className="flex justify-center md:justify-end space-x-4 text-gray-600">
             <a
               href="https://www.facebook.com/5ER.avtomobili"
               className="hover:text-blue-600"
@@ -83,7 +83,7 @@ export default function Footer() {
         />
       </div>
 
-      <div className="ml-5 text-gray-600 py-4 text-sm border-t bg-opacity-80 relative z-10">
+      <div className="ml-5 text-gray-600 py-4 text-sm border-t bg-opacity-80 relative z-10 text-center">
         © 2025 Avtorske pravice so pridržane in so last 5ER Avtomobili
       </div>
     </footer>

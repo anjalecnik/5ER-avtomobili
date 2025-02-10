@@ -2,7 +2,6 @@ import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json, useLoaderData } from "@remix-run/react";
 import LogoCarousel from "~/components/carousel/LogoCarousel";
 import Footer from "~/components/footer/Footer";
-import Header from "~/components/header/Header";
 import Hero from "~/components/hero/Hero";
 import { LocationInfo } from "~/components/locationInfo/LocationInfo";
 import NewCarsSection from "~/components/newCars/NewCars";
@@ -36,7 +35,7 @@ export const loader: LoaderFunction = async () => {
         },
       }
     );
-    console.log(response);
+
     if (!response.ok) throw new Error("Failed to fetch data");
 
     const html = await response.text();
