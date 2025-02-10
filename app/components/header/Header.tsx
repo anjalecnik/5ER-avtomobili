@@ -1,12 +1,13 @@
-import { Link, useLocation } from "@remix-run/react";
+import { Link, useLocation, useNavigate } from "@remix-run/react";
 import Typography from "../typography/Typography";
 
 export default function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
   const background = location.pathname !== "/";
 
   return (
-    <header className="min-h-2 top-0 leading-5 z-[1000] min-w-full overflow-visible py-2 pl-6 pr-9 absolute ">
+    <header className="min-h-2 top-0 leading-5 z-[1000] min-w-full overflow-visible py-2 pl-6 pr-9 absolute">
       {background && (
         <div className="absolute inset-0 w-full h-full z-[-1] header">
           <img
@@ -31,7 +32,7 @@ export default function Header() {
             <Link target="_self" to="/" rel="noreferrer">
               <Typography
                 variant="h5"
-                className="font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
               >
                 DOMOV
               </Typography>
@@ -41,7 +42,7 @@ export default function Header() {
             <Link target="_self" to="/ponudba" rel="noreferrer">
               <Typography
                 variant="h5"
-                className="font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
               >
                 PONUDBA
               </Typography>
@@ -51,7 +52,7 @@ export default function Header() {
             <Link target="_self" to="/" rel="noreferrer">
               <Typography
                 variant="h5"
-                className="font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
               >
                 UVOZ VOZIL
               </Typography>
@@ -61,7 +62,7 @@ export default function Header() {
             <Link target="_self" to="/" rel="noreferrer">
               <Typography
                 variant="h5"
-                className="font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
+                className="text-white font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full"
               >
                 FINANCIRANJE
               </Typography>
@@ -71,7 +72,7 @@ export default function Header() {
             <Link target="_self" to="/#kontakt" rel="noreferrer">
               <Typography
                 variant="h5"
-                className="font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full [&&]:my-2"
+                className="text-white font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full [&&]:my-2"
               >
                 KONTAKT
               </Typography>
