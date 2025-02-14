@@ -1,9 +1,8 @@
-import { Link, useLocation, useNavigate } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import Typography from "../typography/Typography";
 
 export default function Header() {
   const location = useLocation();
-  const navigate = useNavigate();
   const background = location.pathname !== "/";
 
   return (
@@ -69,7 +68,7 @@ export default function Header() {
             </Link>
           </div>
           <div className="py-0 mb-2 px-4 relative border border-white rounded-lg">
-            <Link target="_self" to="/#kontakt" rel="noreferrer">
+            <Link target="_self" to="/kontakt" rel="noreferrer">
               <Typography
                 variant="h5"
                 className="text-white font-medium relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full [&&]:my-2"

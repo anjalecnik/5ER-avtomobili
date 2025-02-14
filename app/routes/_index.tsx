@@ -133,7 +133,6 @@ export default function Index() {
       <LogoCarousel logos={leasingLogos} />
 
       <LocationInfo />
-      <Footer />
     </>
   );
 }
