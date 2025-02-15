@@ -69,7 +69,7 @@ export default function Financing() {
             </div>
             <div className="flex justify-end">
               <img
-                src="/public/financing.jpg"
+                src="/financing.jpg"
                 alt="Financing options"
                 className="rounded-lg shadow-md h-auto max-h-48 object-cover lg:mr-7"
               />
