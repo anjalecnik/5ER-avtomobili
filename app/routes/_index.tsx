@@ -1,13 +1,13 @@
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
 import { json, useLoaderData } from "@remix-run/react";
 import LogoCarousel from "~/components/carousel/LogoCarousel";
-import Footer from "~/components/footer/Footer";
 import Hero from "~/components/hero/Hero";
 import { LocationInfo } from "~/components/locationInfo/LocationInfo";
 import NewCarsSection from "~/components/newCars/NewCars";
 import OurOfferSection from "~/components/ourOffer/OurOffer";
 import { JSDOM } from "jsdom";
 import { ICar } from "~/types/interfaces/ICar";
+import LeasingsLogos from "~/components/leasings/leasings";
 
 export const meta: MetaFunction = () => {
   return [
@@ -103,23 +103,6 @@ export const loader: LoaderFunction = async () => {
   }
 };
 
-const brandLogos = [
-  { src: "/logos/brands/audi.png", alt: "Audi" },
-  { src: "/logos/brands/bmw.png", alt: "BMW" },
-  { src: "/logos/brands/ford.png", alt: "Ford" },
-  { src: "/logos/brands/mercedes.png", alt: "Mercedes-Benz" },
-  { src: "/logos/brands/peugeot.png", alt: "Peugeot" },
-  { src: "/logos/brands/volkswagen.png", alt: "Volkswagen" },
-];
-
-const leasingLogos = [
-  { src: "/logos/leasing/leanpay.png", alt: "leanpay" },
-  { src: "/logos/leasing/motive-service.png", alt: "Motive Service Europe" },
-  { src: "/logos/leasing/gbleasing.png", alt: "GB Leasing" },
-  { src: "/logos/leasing/summit.png", alt: "Summit Leasing" },
-  { src: "/logos/leasing/dhleasing.png", alt: "DH Leasing" },
-];
-
 export default function Index() {
   const cars = useLoaderData<typeof loader>();
 
@@ -127,11 +110,11 @@ export default function Index() {
     <>
       <Hero />
 
-      <LogoCarousel logos={brandLogos} />
+      <LogoCarousel />
       <NewCarsSection cars={cars} />
       <OurOfferSection />
-      <LogoCarousel logos={leasingLogos} />
 
+      <LeasingsLogos className="mx-6" />
       <LocationInfo />
     </>
   );

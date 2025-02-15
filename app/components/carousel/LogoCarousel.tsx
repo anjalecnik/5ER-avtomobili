@@ -1,70 +1,55 @@
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { ILogo } from "~/types/interfaces/ILogo";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-interface ILogoCarousel {
-  logos: ILogo[];
-}
+const logos = [
+  { name: "Audi", src: "/logos/brands/audi.png" },
+  { name: "BMW", src: "/logos/brands/bmw.png" },
+  { name: "Citroen", src: "/logos/brands/citroen.png" },
+  { name: "Ford", src: "/logos/brands/ford.png" },
+  { name: "Land Rover", src: "/logos/brands/land-rover.png" },
+  { name: "Mercedes Benz", src: "/logos/brands/mercedes.png" },
+  { name: "Nissan", src: "/logos/brands/nissan.png" },
+  { name: "Opel", src: "/logos/brands/opel.png" },
+  { name: "Peugeot", src: "/logos/brands/peugeot.png" },
+  { name: "Seat", src: "/logos/brands/seat.png" },
+  { name: "Škoda", src: "/logos/brands/skoda.png" },
+  { name: "Volkswagen", src: "/logos/brands/volkswagen.png" },
+  { name: "Volvo", src: "/logos/brands/volvo.png" },
+];
 
-export default function LogoCarousel({ logos }: ILogoCarousel) {
+export default function LogoCarousel() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % logos.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="mx-auto px-4 py-6">
-      <div className="block md:hidden">
-        <Carousel
-          autoPlay
-          infiniteLoop
-          showThumbs={false}
-          showStatus={false}
-          showIndicators={false}
-          centerMode
-          swipeable
-          emulateTouch
-          useKeyboardArrows
-          interval={3000}
-          transitionTime={500}
-          centerSlidePercentage={33}
-        >
-          {[...logos, ...logos.slice(0, 2)].map((logo, index) => (
-            <div key={index} className="p-2 flex justify-center">
-              <div className="w-[120px] h-[120px] border rounded-lg shadow-md flex items-center justify-center bg-white">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-[80px] object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </div>
-
-      <div className="hidden md:block">
-        <Carousel
-          autoPlay
-          infiniteLoop
-          showThumbs={false}
-          showStatus={false}
-          showIndicators={false}
-          centerMode
-          swipeable={false}
-          emulateTouch={false}
-          interval={3000}
-          transitionTime={500}
-          centerSlidePercentage={20}
-        >
-          {[...logos, ...logos.slice(0, 2)].map((logo, index) => (
-            <div key={index} className="p-2 flex justify-center">
-              <div className="w-[120px] h-[120px] border rounded-lg shadow-md flex items-center justify-center bg-white">
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="h-[80px] object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </div>
+    <div className="w-full overflow-hidden bg-white py-10 relative flex justify-center">
+      <motion.div
+        className="flex space-x-8 w-max"
+        animate={{ x: `-${index * 160}px` }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        {[...logos, ...logos].map((logo, i) => (
+          <div
+            key={i}
+            className="p-4 md:p-6 bg-white shadow-lg rounded-xl flex flex-col items-center w-[45vw] md:w-[30vw] lg:w-[15vw] h-auto flex-shrink-0"
+          >
+            <img
+              src={logo.src}
+              alt={logo.name}
+              className="mb-2 w-20 h-20 object-contain"
+            />
+            <p className="text-lg font-medium text-gray-700 whitespace-nowrap overflow-hidden text-ellipsis">
+              {logo.name}
+            </p>
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 }
