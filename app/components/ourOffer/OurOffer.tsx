@@ -83,8 +83,8 @@ export default function OurOfferSection() {
         </div>
       </div>
 
-      <div className="mt-10 border-t pt-6 flex flex-wrap justify-between text-center">
-        <div className="w-1/2 sm:w-1/4">
+      <div className="mt-10 border-t pt-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+        <div className="flex flex-col items-center">
           <Typography
             variant="display2"
             className="font-bold text-semantic-gray-bg-weak"
@@ -95,7 +95,8 @@ export default function OurOfferSection() {
             AVTOMOBILOV NA ZALOGI
           </Typography>
         </div>
-        <div className="w-1/2 sm:w-1/4">
+
+        <div className="flex flex-col items-center">
           <Typography
             variant="display2"
             className="font-bold text-semantic-gray-bg-weak"
@@ -106,7 +107,8 @@ export default function OurOfferSection() {
             ZADOVOLJNIH STRANK
           </Typography>
         </div>
-        <div className="w-1/2 sm:w-1/4 mt-6 sm:mt-0">
+
+        <div className="flex flex-col items-center">
           <Typography
             variant="display2"
             className="font-bold text-semantic-gray-bg-weak"
@@ -117,7 +119,8 @@ export default function OurOfferSection() {
             LET IZKUŠENJ
           </Typography>
         </div>
-        <div className="w-1/2 sm:w-1/4 mt-6 sm:mt-0 flex flex-col items-center text-center">
+
+        <div className="flex flex-col items-center">
           <Typography
             variant="display2"
             className="font-bold flex items-center text-semantic-gray-bg-weak"

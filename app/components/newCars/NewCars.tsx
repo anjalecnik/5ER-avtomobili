@@ -2,6 +2,7 @@ import { FaCalendarAlt, FaCogs, FaRegStar } from "react-icons/fa";
 import { FaRoad } from "react-icons/fa6";
 import Typography from "../typography/Typography";
 import { ICar } from "~/types/interfaces/ICar";
+import { Link } from "@remix-run/react";
 
 interface INewCarsSection {
   cars: ICar[];
@@ -99,7 +100,9 @@ export default function NewCarsSection({ cars }: INewCarsSection) {
           variant="small"
           className="text-gray-600 hover:underline cursor-pointer"
         >
-          Pregled vseh →
+          <Link target="_self" to="/ponudba" rel="noreferrer">
+            Pregled vseh →
+          </Link>
         </Typography>
       </div>
     </div>
