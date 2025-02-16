@@ -1,6 +1,14 @@
 import { FaEnvelope, FaPhoneAlt, FaClock, FaRegClock } from "react-icons/fa";
 import Typography from "~/components/typography/Typography";
 import { useState } from "react";
+import { MetaFunction } from "@remix-run/react";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Kontakt" },
+    { name: "description", content: "Prodaja avtomobilov delovni čas" },
+  ];
+};
 
 export default function Contact() {
   const [currentDay] = useState(new Date().getDay());

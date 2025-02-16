@@ -1,5 +1,13 @@
+import { MetaFunction } from "@remix-run/react";
 import LeasingsLogos from "~/components/leasings/leasings";
 import Typography from "~/components/typography/Typography";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Financiranje" },
+    { name: "description", content: "Prodaja avtomobilov financiranje" },
+  ];
+};
 
 export default function Financing() {
   return (
