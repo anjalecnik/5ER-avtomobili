@@ -56,18 +56,31 @@ export default function Offers() {
   return (
     <div className="bg-[#F8F9FA] min-h-screen p-4 pb-0 mt-24">
       <div className="flex flex-col items-center mt-4 mb-4 max-md:mx-4 md:w-1/2 mx-auto relative">
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={(e) => {
-            setSearchTerm(e.target.value);
-            setShowDropdown(true);
-          }}
-          placeholder="⌕ Išči po znamki"
-          className="w-full px-4 py-2 border text-semantic-background-base border-gray-400 rounded-lg bg-[#FFFFFF]"
-          onFocus={() => setShowDropdown(true)}
-          onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
-        />
+        <div className="w-full relative">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setShowDropdown(true);
+            }}
+            placeholder="⌕ Išči po znamki"
+            className="w-full px-4 py-2 border text-semantic-background-base border-gray-400 rounded-lg bg-[#FFFFFF] pr-10"
+            onFocus={() => setShowDropdown(true)}
+            onBlur={() => setTimeout(() => setShowDropdown(false), 200)}
+          />
+          {searchTerm && (
+            <button
+              onClick={() => {
+                setSelectedBrand("");
+                setSearchTerm("");
+              }}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-gray-800"
+            >
+              ✖
+            </button>
+          )}
+        </div>
         {showDropdown && (
           <ul className="absolute z-20 bg-white border border-gray-300 w-full mt-[42px] rounded-lg shadow-lg max-h-40 overflow-y-auto">
             {filteredBrands.map((brand) => (
