@@ -11,7 +11,7 @@ export function LocationInfo() {
         loading="lazy"
       ></iframe>
 
-      <div className="absolute bottom-6 left-6 bg-white shadow-lg rounded-lg p-6 w-[300px]">
+      <div className="absolute bottom-6 left-[10px] bg-white max-md: rounded-lg shadow-lg p-6 w-[250px] md:w-[330px]">
         <h2 className="text-2xl font-bold mb-2 text-semantic-gray-bg-weak">
           Stopite v stik
         </h2>
