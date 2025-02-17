@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const logos = [
   { name: "Audi", src: "/logos/brands/audi.png" },
@@ -7,7 +8,7 @@ const logos = [
   { name: "Citroen", src: "/logos/brands/citroen.png" },
   { name: "Ford", src: "/logos/brands/ford.png" },
   { name: "Land Rover", src: "/logos/brands/land-rover.png" },
-  { name: "Mercedes Benz", src: "/logos/brands/mercedes.png" },
+  { name: "Mercedes-Benz", src: "/logos/brands/mercedes.png" },
   { name: "Nissan", src: "/logos/brands/nissan.png" },
   { name: "Opel", src: "/logos/brands/opel.png" },
   { name: "Peugeot", src: "/logos/brands/peugeot.png" },
@@ -19,6 +20,7 @@ const logos = [
 
 export default function LogoCarousel() {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,6 +28,10 @@ export default function LogoCarousel() {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleLogoClick = (brand: string) => {
+    navigate(`/ponudba?brand=${encodeURIComponent(brand)}`);
+  };
 
   return (
     <div className="w-full overflow-hidden bg-white py-10 relative flex justify-center">
@@ -35,9 +41,11 @@ export default function LogoCarousel() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         {[...logos, ...logos].map((logo, i) => (
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
           <div
             key={i}
-            className="p-4 md:p-6 bg-white shadow-lg rounded-xl flex flex-col items-center w-[45vw] md:w-[30vw] lg:w-[15vw] h-auto flex-shrink-0"
+            className="p-4 md:p-6 bg-white shadow-lg rounded-xl flex flex-col items-center w-[45vw] md:w-[30vw] lg:w-[15vw] h-auto flex-shrink-0 cursor-pointer"
+            onClick={() => handleLogoClick(logo.name)}
           >
             <img
               src={logo.src}

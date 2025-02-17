@@ -2,7 +2,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-4 bg-[#F7F7F7]">
+    <footer className="relative pt-4 bg-[#F7F7F7]">
       <div className="relative py-10 px-4 mx-auto text-center">
         <h3 className="text-2xl font-semibold text-gray-800">
           Niste našli, kar ste iskali?

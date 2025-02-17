@@ -9,6 +9,11 @@ body {
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
+
+  ::placeholder {
+    color: rgb(75 85 99);
+    opacity: 1; /* Firefox */
+  }
 }
 
 @layer base {

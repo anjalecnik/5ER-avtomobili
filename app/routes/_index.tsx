@@ -71,7 +71,9 @@ export const loader: LoaderFunction = async () => {
           .trim() || "?";
 
       const image = carElement.querySelector("img")?.getAttribute("src") || "";
-      const link = `https://www.avto.net/${carElement.getAttribute("href")}`;
+      const link = `https://www.avto.net/Ads/${carElement.getAttribute(
+        "href"
+      )}`;
 
       const transmissionElement = carElement.querySelector(
         ".flaticon-gearbox-2, .flaticon-gearbox-5"

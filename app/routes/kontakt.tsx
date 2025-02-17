@@ -21,7 +21,7 @@ export default function Contact() {
 
   return (
     <div className="max-w-7xl mx-auto p-8 mt-20 relative">
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center border border-gray-300 rounded-lg shadow-lg p-6 cursor-pointer hover:shadow-xl transition">
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center border border-gray-300 rounded-lg shadow-lg p-6 cursor-default hover:shadow-xl transition">
         <div>
           <Typography variant="h3" className="font-semibold text-gray-700">
             Sedež podjetja
@@ -79,7 +79,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center border border-gray-300 rounded-lg shadow-lg p-6 cursor-pointer hover:shadow-xl transition">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-center border border-gray-300 rounded-lg shadow-lg p-6 cursor-default hover:shadow-xl transition">
         <Typography
           variant="h3"
           className="font-semibold text-gray-700 text-center md:col-span-3"
@@ -118,7 +118,7 @@ export default function Contact() {
         })}
       </div>
 
-      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center border border-gray-300 rounded-lg shadow-lg p-6 cursor-pointer hover:shadow-xl transition">
+      <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center border border-gray-300 rounded-lg shadow-lg p-6 cursor-default hover:shadow-xl transition">
         <div className="relative h-80 overflow-hidden rounded-lg">
           <img
             src="/salon.jpeg"
