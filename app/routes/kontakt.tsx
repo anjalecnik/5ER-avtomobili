@@ -27,7 +27,7 @@ export default function Contact() {
             Sedež podjetja
           </Typography>
           <Typography variant="body" className="text-gray-800 mb-4">
-            <strong>5ER Avtomobili, d.o.o.</strong>
+            <strong>5ER Avtomobili, s.p.</strong>
             <br />
             Slance 3<br />
             3211 Teharje
@@ -60,10 +60,10 @@ export default function Contact() {
                 <FaEnvelope className="text-gray-600 w-6 h-6" />
               </div>
               <a
-                href="mailto:info@5eravtomobili.si"
+                href="mailto:5eravtomobili@gmail.com"
                 className="text-gray-700 font-medium text-base pr-4"
               >
-                info@5eravtomobili.si
+                5eravtomobili@gmail.com
               </a>
             </div>
           </div>

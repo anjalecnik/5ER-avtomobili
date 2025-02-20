@@ -34,17 +34,17 @@ export default function Footer() {
             <a href="tel:041777988" className="text-gray-600 underline">
               041 / 777-988
             </a>
-            - Peter
+            &nbsp;Peter
           </p>
           <p>
             <a href="tel:041734425" className="text-gray-600 underline">
               041 / 734-425
             </a>
-            - Zvone
+            &nbsp; Zvone
           </p>
           <p>
-            <a href="mailto:info@5eravtomobili.si" className="text-gray-600">
-              info@5eravtomobili.si
+            <a href="mailto:5eravtomobili@gmail.com" className="text-gray-600">
+              5eravtomobili@gmail.com
             </a>
           </p>
         </div>

@@ -47,7 +47,7 @@ export default function Financing() {
             </li>
             <li>
               <strong>Financiranje s položnicami:&nbsp;</strong> Minimalni
-              polog, odplačevanje do 72 mesecev.
+              polog, odplačevanje do 96 mesecev.
             </li>
             <li>
               <strong>Obročno odplačevanje za starejša vozila.</strong>
@@ -68,6 +68,7 @@ export default function Financing() {
                 <li>Veljavna pogodba o zaposlitvi.</li>
                 <li>Zadnje tri plačilne liste ali bančni izpiski.</li>
                 <li>Osebni dokument (osebna izkaznica ali potni list).</li>
+                <li>Veljavno vozniško dovoljenje.</li>
                 <li>Davčna številka.</li>
                 <li>Bančna kartica.</li>
               </ul>
@@ -101,7 +102,7 @@ export default function Financing() {
           </Typography>
           <Typography variant="body" className="text-gray-600 mb-4">
             Nudimo možnost pridobitve avtomobilskega kredita do 15.000 EUR z
-            dobo odplačevanja do 72 mesecev.
+            dobo odplačevanja do 84 mesecev.
           </Typography>
           <ul className="list-disc pl-5 space-y-3 text-gray-600">
             <li>Osebni dokument.</li>

@@ -101,7 +101,7 @@ export default function OurOfferSection() {
             variant="display2"
             className="font-bold text-semantic-gray-bg-weak"
           >
-            1000+
+            5000+
           </Typography>
           <Typography variant="body" className="text-gray-600">
             ZADOVOLJNIH STRANK
