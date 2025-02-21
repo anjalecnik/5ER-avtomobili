@@ -22,16 +22,12 @@ export const loader: LoaderFunction = async () => {
       "https://www.avto.net/_INDIVIDUAL/?broker=14015&subSORT=3&subTIPSORT=DESC",
       {
         headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-          "Accept-Language": "en-US,en;q=0.9",
+          "User-Agent": "PostmanRuntime/7.43.0",
+          Accept: "*/*",
           "Accept-Encoding": "gzip, deflate, br",
-          Accept:
-            "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-          Referer: "https://www.google.com/",
-          DNT: "1",
           Connection: "keep-alive",
-          "Upgrade-Insecure-Requests": "1",
+          Cookie:
+            "__cf_bm=xwy0FUw2OjoMY4Z.AzpMxgIzObyeD.Z5XkQrjkm54lo-1740161401-1.0.1.1-FxQ...",
         },
       }
     );
