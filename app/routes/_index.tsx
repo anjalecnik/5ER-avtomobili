@@ -32,7 +32,10 @@ export const loader: LoaderFunction = async () => {
       }
     );
 
-    if (!response.ok) throw new Error("Failed to fetch data");
+    if (!response.ok) {
+      console.log(response);
+      throw new Error("Failed to fetch data");
+    }
 
     const html = await response.text();
     const dom = new JSDOM(html);
